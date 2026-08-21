@@ -169,7 +169,7 @@ let exclusives = [
   for (e of exclusives) {
     document.write(`
 <div class="card">
-<p class="owner">${(!e.no_avatar)?'<img src="https://klavogonki.ru/storage/avatars/${e.owner}.png">':'' }<a href="https://klavogonki.ru/u/#/${e.owner}/">${e.nick}</a></p>
+<p class="owner">${(!e.no_avatar)?`<img src="https://klavogonki.ru/storage/avatars/${e.owner}.png">`:'' }<a href="https://klavogonki.ru/u/#/${e.owner}/">${e.nick}</a></p>
 <div class="car" style="background-image: url(https://klavogonki.ru/img/cars/${e.image}.png)"></div>
 <p class="carName">${e.name}</p>
 </div>
