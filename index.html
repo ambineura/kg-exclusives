@@ -44,14 +44,16 @@ let exclusives = [
         "owner": 64292,
         "public": true,
         "nick": "Sul",
-        "no_avatar": true
+        "no_avatar": true,
+        "hint": "Приобретён за начитерённые очки, причём только со второго раза. Впоследствии отдан в публичный доступ."
     },
     {
         "name": "Трамвай",
         "image": "1005",
         "owner": 111407,
         "public": true,
-        "nick": "Bombo"
+        "nick": "Bombo",
+        "hint": "Доступен для всех."
     },
     {
         "name": "Motorcity Europe MC1",
@@ -64,7 +66,8 @@ let exclusives = [
         "image": "1007",
         "owner": 155280,
         "public": true,
-        "nick": "pashkhan"
+        "nick": "pashkhan",
+        "hint": "Доступен для всех, кто достиг 50го уровня"
     },
     {
         "name": "Mercedes-Benz SL 600",
@@ -77,13 +80,15 @@ let exclusives = [
         "image": "1009",
         "owner": 157594,
         "public": true,
-        "nick": "Ice_Wolf"
+        "nick": "Ice_Wolf",
+        "hint": "Доступен для всех"
     },
     {
         "name": "Pagani Zonda R",
         "image": "1010",
         "owner": 235269,
-        "nick": "lazy"
+        "nick": "lazy",
+        "hint": "Мог бы быть в общем доступе ещё с 16го октября 2021го года, но что-то подзатянулось..."
     },
     {
         "name": "Бэтпод",
@@ -132,7 +137,8 @@ let exclusives = [
         "image": "1019",
         "owner": 922,
         "public": true,
-        "nick": "lovermann"
+        "nick": "lovermann",
+        "hint": "Доступен для всех за 1000 бонусов"
     },
     {
         "name": "N-Bar",
@@ -170,7 +176,7 @@ let exclusives = [
     document.write(`
 <div class="card">
 <p class="owner">${(!e.no_avatar)?`<img src="https://klavogonki.ru/storage/avatars/${e.owner}.png">`:'' }<a href="https://klavogonki.ru/u/#/${e.owner}/">${e.nick}</a></p>
-<div class="car" style="background-image: url(https://klavogonki.ru/img/cars/${e.image}.png)"></div>
+<div class="car" style="background-image: url(https://klavogonki.ru/img/cars/${e.image}.png)" title="${(e.hint)?`${e.hint}`:''}"></div>
 <p class="carName">${e.name}</p>
 </div>
     `);
